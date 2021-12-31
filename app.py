@@ -13,20 +13,16 @@ app = Flask(__name__)
 def count_to_million():
     data = []
     for i in range(1, 1000001):
-        # print every 10th number in bold
+        # every 10th number in bold
         if i % 10 == 0:
-            print("<b>{}</b>".format(i), end="")
             data.append("<b>{}</b>".format(i))
-        # print every 3rd number in italics
+        # every 3rd number in italics
         elif i % 3 == 0:
-            print("<i>{}</i>".format(i), end="")
             data.append("<i>{}</i>".format(i))
-        # print every prime number in underline
+        # every prime number in underline
         elif is_prime(i):
-            print("<u>{}</u>".format(i), end="")
             data.append("<u>{}</u>".format(i))
         else:
-            print(i, end="")
             data.append(i)
     return data
 
